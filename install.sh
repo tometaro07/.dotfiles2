@@ -4,7 +4,7 @@ echo "Installing Fedora groups"
 sudo dnf group install admin-tools base-graphical dial-up fonts hardware-support multimedia networkmanager-submodules printing standard
 
 echo "Installing Hyprland Packages for a SwayVM group like expirience"
-sudo dnf install hyprland hyprpaper hypridle hyprlock woofi swaync grim polkit slurp waybar wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland
+sudo dnf install hyprland hyprpaper hypridle hyprlock wofi swaync grim polkit slurp waybar wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland
 
 echo "Installing SwayVM group addapted"
 sudo dnf install NetworkManager-l2tp-gnome NetworkManager-libreswan-gnome NetworkManager-openconnect-gnome NetworkManager-openvpn-gnome NetworkManager-pptp-gnome NetworkManager-sstp-gnome NetworkManager-vpnc-gnome nautilus blueman bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv network-manager-applet pavucontrol pinentry-gnome3 playerctl pulseaudio-utils  sddm system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk firefox
@@ -20,6 +20,7 @@ sudo dnf remove kitty
 
 echo "Install Tools"
 
+dnf copr enable pennbauman/ports
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 

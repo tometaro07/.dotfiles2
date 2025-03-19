@@ -13,8 +13,10 @@ echo "Install Ghostty and Starship"
 sudo dnf copr enable pgdev/ghostty
 sudo dnf install ghostty
 
-dnf copr enable atim/starship
-dnf install starship
+sudo dnf copr enable atim/starship
+sudo dnf install starship
+
+sudo dnf remove kitty
 
 echo "Install Tools"
 

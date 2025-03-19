@@ -41,3 +41,4 @@ systemctl enable sddm.service
 systemctl set-default graphical.target
 
 echo "Setup config files"
+stow hyprland/

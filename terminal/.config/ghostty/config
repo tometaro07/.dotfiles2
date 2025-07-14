@@ -1,0 +1,37 @@
+theme = Espresso
+#afterglow, arcoiris, tokyonight_night, Obsidian, GitHub Dark, Espresso
+#hello
+background-opacity = 0.9
+background-blur = 40
+copy-on-select = true
+split-divider-color = 999999
+unfocused-split-fill = 000000
+
+# Unbind Keys
+keybind = ctrl+alt+up=unbind
+keybind = ctrl+alt+down=unbind
+keybind = ctrl+alt+left=unbind
+keybind = ctrl+alt+right=unbind
+
+keybind = ctrl+shift+e=unbind
+keybind = ctrl+shift+o=unbind
+keybind = ctrl+shift+t=unbind
+
+keybind = ctrl+shift+comma=unbind
+
+# Key-binds
+keybind = alt+ctrl+right=new_split:right
+keybind = alt+ctrl+down=new_split:down
+keybind = alt+ctrl+left=new_split:left
+keybind = alt+ctrl+up=new_split:up
+keybind = alt+shift+q=close_surface
+
+keybind = alt+up=goto_split:up
+keybind = alt+down=goto_split:down
+keybind = alt+left=goto_split:left
+keybind = alt+right=goto_split:right
+
+keybind = ctrl+up=scroll_page_lines:-1
+keybind = ctrl+down=scroll_page_lines:1
+
+keybind = ctrl+shift+semicolon=reload_config

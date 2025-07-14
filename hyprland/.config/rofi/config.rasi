@@ -1,0 +1,14 @@
+/* config - Launcher */
+
+configuration {
+	modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "";
+  	drun-display-format:        "{name}";
+    font:                       "JetBrainsMono Nerd Font Propo 15";
+    combi-hide-mode-prefix:     true;
+}
+
+/* Config and colors ----------------------------------------------- */
+
+@theme "style_9.rasi"

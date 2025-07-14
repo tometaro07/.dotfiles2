@@ -1,0 +1,65 @@
+
+mainbox {
+    background-color:               rgba(0,0,0,0);
+    children:                       [ inputbar, listview ];
+    spacing:                        15px;
+    padding:                        30px;
+}
+
+element {
+    background-color:   rgba(0,0,0,0);
+    padding:	5px;
+    border-radius:	8px;
+}
+element-icon {
+    background-color:               inherit;
+    text-color:                     inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           20px;
+    border:                         0px;
+}
+element-text {
+    background-color:               inherit;
+    text-color:                     inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0;
+    margin:                         2px 0px 2px 2px;
+}
+element.normal.normal {
+    background-color: @UGT;
+    text-color:       @FG;
+}
+element.normal.urgent {
+    background-color: @UGT;
+    text-color:       @BGA;
+}
+element.normal.active {
+    background-color: @UGT;
+    text-color:       @BGA;
+}
+element.selected.normal {
+    background-color: @SEL;
+    text-color:       @BGA;
+}
+element.selected.urgent {
+    background-color: @UGT;
+    text-color:       @BGA;
+}
+element.selected.active {
+    background-color: @BG;
+    text-color:       @FG;
+}
+element.alternate.normal {
+    background-color: @BG;
+    text-color:       @FG;
+}
+element.alternate.urgent {
+    background-color: @BG;
+    text-color:       @FG;
+}
+element.alternate.active {
+    background-color: @BG;
+    text-color:       @FG;
+}

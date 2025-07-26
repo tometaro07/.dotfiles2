@@ -6,7 +6,6 @@ sudo dnf group install admin-tools base-graphical dial-up fonts hardware-support
 echo "Installing Hyprland Packages for a SwayVM group like expirience"
 sudo dnf copr enable tofik/nwg-shell
 sudo dnf copr enable solopasha/hyprland
-sudo dnf copr enable pabrahamsson/hyprpanel
 
 sudo dnf install hyprland hyprpaper hypridle hyprlock rofi-wayland swaync grim polkit slurp waybar wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland nwg-look hyprpanel hyprsunset
 
@@ -29,7 +28,7 @@ echo "Install Tools"
 
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-sudo dnf install micro qalc fzf vlc inkscape flatpak texlive-scheme-full texlive-chktex okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils
+sudo dnf install qalc fzf vlc inkscape flatpak texlive-scheme-full texlive-chktex okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils
 sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 
 echo "Install social"

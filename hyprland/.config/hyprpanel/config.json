@@ -42,7 +42,7 @@
   "theme.bar.floating": false,
   "bar.workspaces.show_icons": false,
   "theme.bar.buttons.workspaces.enableBorder": false,
-  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.monitorSpecific": true,
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "bar.workspaces.showAllActive": true,
   "bar.workspaces.numbered_active_indicator": "highlight",
@@ -471,5 +471,7 @@
   "theme.bar.buttons.systray.enableBorder": false,
   "menus.dashboard.stats.enabled": true,
   "theme.bar.buttons.modules.ram.enableBorder": false,
-  "theme.matugen_settings.contrast": 0
+  "theme.matugen_settings.contrast": 0,
+  "bar.workspaces.ignored": "-98",
+  "bar.workspaces.show_numbered": false
 }

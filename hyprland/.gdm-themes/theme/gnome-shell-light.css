@@ -3154,7 +3154,8 @@ StScrollBar {
 #lockDialogGroup {
   background: url("default.png");
   background-size: 1920px 1080px;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
+  background-position: 0 0;
 }
 
 .unlock-dialog-clock {

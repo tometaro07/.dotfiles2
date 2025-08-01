@@ -13,7 +13,9 @@ sudo dnf install pip
 pip install pywal
 
 echo "Installing SwayVM group addapted"
-sudo dnf install nautilus blueman bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils qt6-qtvirtualkeyboard qt6-qtmultimedia system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk firefox glib2-devel
+sudo dnf copr enable sneexy/zen-browser
+
+sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk zen-browser glib2-devel
 
 sudo dnf install gdm --setopt=install_weak_deps=False
 
@@ -30,7 +32,10 @@ echo "Install Tools"
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-sudo dnf install qalc fzf vlc inkscape flatpak texlive-scheme-full texlive-chktex okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils gvim
+sudo dnf install qalc fzf vlc inkscape flatpak okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils neovim zathura-pdf-mupdf
+
+sudo dnf install texlive-scheme-full --setopt=install_weak_deps=False
+
 sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 
 echo "Install social"
@@ -62,8 +67,9 @@ echo 'eval "$(starship init bash)"' >> ~/.bashrc
 
 echo "" >> ~/.bashrc
 echo "# Vim" >> ~/.bashrc
-echo "alias vim='vimx'" >> ~/.bashrc
+echo "alias vim='nvim'" >> ~/.bashrc
 
+echo "" >> ~/.bashrc
 echo "# Set up fzf key bindings and fuzzy completion" >> ~/.bashrc 
 echo 'eval "$(fzf --bash)"' >> ~/.bashrc
 

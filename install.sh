@@ -13,9 +13,7 @@ sudo dnf install pip
 pip install pywal gpustat
 
 echo "Installing SwayVM group addapted"
-sudo dnf copr enable sneexy/zen-browser
-
-sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk zen-browser glib2-devel
+sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel
 
 sudo dnf install gdm --setopt=install_weak_deps=False
 
@@ -32,7 +30,7 @@ echo "Install Tools"
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
-sudo dnf install qalc fzf vlc inkscape flatpak okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils neovim zathura-pdf-mupdf
+sudo dnf install qalc fzf vlc inkscape flatpak okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils neovim zathura-pdf-mupdf gnome-system-monitor gnome-calendar
 
 sudo dnf install texlive-scheme-full --setopt=install_weak_deps=False
 
@@ -47,10 +45,8 @@ rm ProtonPass.rpm
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrep
 flatpak install flathub com.spotify.Client
-
-echo "Install Others"
-
-sudo dnf install gnome-system-monitor gnome-calendar
+flatpak install flathub app.zen_browser.zen
+flatpak install flathub app.grayjay.Grayjay
 
 echo "Setup config files"
 cd ~/.dotfiles2

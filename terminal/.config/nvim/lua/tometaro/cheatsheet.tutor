@@ -1,7 +1,6 @@
 # Cheat Sheet for all the commands you need
 
-# 1. Vim Motions
-# 1.1 Navigation
+# 1. Navigation inside file
 
 h / j / k / l - left/down/up/right
 <Ctrl-d> / <Ctrl-u> - half-page down/up
@@ -19,3 +18,110 @@ G - Last line
 {number}G - Go to line {number}
 {number}j - Go down {number} lines
 {number}k - Go up {number} lines
+
+% - Nearest/matching {[()]}
+[( / { / < - Previous ( or { or <
+]) - Next
+
+# 2. Search and Replace
+/ - search
+/\C - respect capitalization
+
+n / N - next/previous match in search pattern
+\* - search word under cursor
+
+:s/old/new/g - replace all old with new in line
+           gc - with confirmations
+:%s/         - replace all old with new throughout file
+
+<Space-s> - replace word under cursor
+
+# 3. Operators
+"+ - use clipboard
+"_ - use void
+
+d - cut text
+<Space-d> - delete text
+y - yank/copy
+<Space-y> - copy text to clipboard
+p - paste
+<Space-p> - delete and paste
+<Ctrl-Shift-v> - paste from clipboard
+c - change (delete and insert)
+
+> / < - indent right/lefti
+
+g~ - Swap case
+gU - Uppercase
+gu - Lowercase
+
+# 4. Editing
+
+r - Replace one character
+R - Enter Replace mode
+u - Undo changes
+<Space-u> - Undo Tree
+<C-R> - Redo change
+
+<Shift - J / K> - move block down/up #visual mode
+cs{old}{new} - to change delimiters (eg. change () to {})
+ds{delimiter} - delete delimiter
+ys{text object}{delimiter} - insert delimiter around text object
+S{delimiter} - insert delimiter around visual block
+
+# 5. Navigation between files and windows
+
+<Ctrl-ww> - switch window 
+<Space-pv> - go to father directory
+
+<Space-a> - append file to quick access files
+<Ctrl-e> - open list of quick access files
+<Ctrl-{number}> - jump to quick file {file}
+
+<Space-pf> - find files
+<Ctrl-p> - find files in git project
+<Space-ps> - find occurences in files
+
+# 6. Formating, Errors and Completion
+<Space-f> - format file
+
+:copen - Open the global quickfix
+:ccl - Close the global quickfix
+<Ctrl-k / j> - previous/next global fix
+
+<Space-vd> - open float window for diagnostics
+<Space-k / j> - previous/next diagnostic
+
+<Shift - k> - floating definition
+gd - go to definition
+
+<Space-vca> - linter actions
+
+<Space-vrr> - find references
+<Space-vrn> - rename variable
+
+<Ctrl-p / n> - previous/next completion suggestion
+<Ctrl-y> - accept suggestion
+<Ctrl-e> - reject suggestion
+
+# 7. Git
+<Space-gs> - git status
+- - toggle beteen stage/unstage changes
+cc - commit changes
+ 
+# 8. Interactive shells
+
+TODO: Rewrite some keybinds maybe create a local leader
+
+# 9. LaTex
+
+TODO: VimTex keybinds and zathura keybinds
+
+# 10. Others
+. - repeat last action
+
+q{key register} - start recording all actions to key register (press q again to stop)
+@{key register} - use record action in key register
+
+<Ctrl-A> - Increment number
+<Ctrl-X> - Decrement

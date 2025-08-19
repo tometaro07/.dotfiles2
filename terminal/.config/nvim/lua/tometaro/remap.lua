@@ -13,8 +13,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- jumping for quickfix
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+--vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+--vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- Paste/Delete to replace while keeping the same paste
 vim.keymap.set("x", "<leader>p", "\"_dP")

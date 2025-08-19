@@ -22,12 +22,12 @@ api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'K', lsp.buf.hover, opts)
         vim.keymap.set("n", "<leader>vws", function() lsp.buf.workspace_symbol() end, opts)
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-        vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts) -- check a better keybind
-        vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts) -- check a better keybind
+        vim.keymap.set("n", "<leader>n", function() vim.diagnostic.goto_next() end, opts) -- check a better keybind
+        vim.keymap.set("n", "<leader>p", function() vim.diagnostic.goto_prev() end, opts) -- check a better keybind
         vim.keymap.set("n", "<leader>vca", function() lsp.buf.code_action() end, opts)
         vim.keymap.set("n", "<leader>vrr", function() lsp.buf.references() end, opts)
         vim.keymap.set("n", "<leader>vrn", function() lsp.buf.rename() end, opts)
         vim.keymap.set('n', '<C-h>', lsp.buf.signature_help, opts)
-        vim.keymap.set('n', '<space>f', function() lsp.buf.format { async = true } end, opts)
+        vim.keymap.set('n', '<leader>f', function() lsp.buf.format { async = true } end, opts)
     end,
 })

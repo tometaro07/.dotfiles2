@@ -16,9 +16,9 @@ cmp.setup({
         { name = "buffer" },
     },
     mapping = {
-        ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ['<C-e>'] = cmp.mapping.abort(),
         ['<C-y>'] = cmp.mapping(
             cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Insert }),
             { "i", "c" }),

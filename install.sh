@@ -13,7 +13,7 @@ sudo dnf install pip
 pip install pywal gpustat
 
 echo "Installing SwayVM group addapted"
-sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel
+sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel polkit
 
 sudo dnf install gdm --setopt=install_weak_deps=False
 
@@ -72,4 +72,18 @@ echo "alias vim='nvim'" >> ~/.bashrc
 echo "" >> ~/.bashrc
 echo "# Set up fzf key bindings and fuzzy completion" >> ~/.bashrc 
 echo 'eval "$(fzf --bash)"' >> ~/.bashrc
+echo "export FZF_COMPLETION_PATH_OPTS='--walker file,dir,follow,hidden'" >> ~/.bashrc
+echo "export FZF_COMPLETION_DIR_OPTS='--walker dir,follow,hidden'" >> ~/.bashrc
 
+echo "Install Nvidia Drivers"
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf update -y # and reboot if you are not on the latest kernel
+sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
+sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
+
+sudo dnf install xorg-x11-drv-nvidia-power
+sudo systemctl enable nvidia-{suspend,resume,hibernate}
+# Optional: tweak "nvidia options NVreg_TemporaryFilePath=/var/tmp" from /etc/modprobe.d/nvidia.conf as needed if you have issue with /tmp as tmpfs with nvidia suspend )
+
+sudo dnf install nvidia-vaapi-driver libva-utils vdpauinfo

@@ -1,0 +1,21 @@
+# Cheat Sheet for all the commands you need
+
+# 1. Vim Motions
+# 1.1 Navigation
+
+h / j / k / l - left/down/up/right
+<Ctrl-d> / <Ctrl-u> - half-page down/up
+
+b / w - previous/next word
+ge / e - previous/next end of word
+
+0 / _ - start of line
+^ - start of line after black space
+$ - end of line
+
+gg - First line
+G - Last line
+:{number} - Go to line {number}
+{number}G - Go to line {number}
+{number}j - Go down {number} lines
+{number}k - Go up {number} lines

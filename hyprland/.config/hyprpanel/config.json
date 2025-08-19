@@ -473,5 +473,6 @@
   "theme.bar.buttons.modules.ram.enableBorder": false,
   "theme.matugen_settings.contrast": 0,
   "bar.workspaces.ignored": "-98",
-  "bar.workspaces.show_numbered": false
+  "bar.workspaces.show_numbered": false,
+  "menus.dashboard.stats.enable_gpu": true
 }

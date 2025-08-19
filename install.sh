@@ -7,10 +7,10 @@ echo "Installing Hyprland Packages for a SwayVM group like expirience"
 sudo dnf copr enable tofik/nwg-shell
 sudo dnf copr enable solopasha/hyprland
 
-sudo dnf install hyprland hyprpaper hypridle hyprlock rofi-wayland swaync grim polkit slurp waybar wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland nwg-look hyprpanel hyprsunset
+sudo dnf install hyprland hyprpaper hypridle hyprlock rofi-wayland grim polkit slurp wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland nwg-look hyprpanel hyprsunset
 
 sudo dnf install pip
-pip install pywal
+pip install pywal gpustat
 
 echo "Installing SwayVM group addapted"
 sudo dnf copr enable sneexy/zen-browser
@@ -26,7 +26,7 @@ sudo dnf install ghostty
 sudo dnf copr enable atim/starship
 sudo dnf install starship
 
-sudo dnf remove kitty
+sudo dnf remove kitty nwg-panel wofi
 
 echo "Install Tools"
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -40,6 +40,10 @@ sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore
 
 echo "Install social"
 sudo dnf install thunderbird discord
+
+wget -c https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
+sudo dnf install ./ProtonPass.rpm
+rm ProtonPass.rpm
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrep
 flatpak install flathub com.spotify.Client

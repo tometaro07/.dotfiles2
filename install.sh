@@ -13,7 +13,7 @@ sudo dnf install pip
 pip install pywal gpustat
 
 echo "Installing SwayVM group addapted"
-sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel polkit
+sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel wget
 
 sudo dnf install gdm --setopt=install_weak_deps=False
 
@@ -32,8 +32,6 @@ sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 
 sudo dnf install qalc fzf vlc inkscape flatpak okular libreoffice shotwell gimp stow cabextract xorg-x11-font-utils neovim zathura-pdf-mupdf gnome-system-monitor gnome-calendar
 
-sudo dnf install texlive-scheme-full --setopt=install_weak_deps=False
-
 sudo rpm -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 
 echo "Install social"
@@ -43,20 +41,13 @@ wget -c https://proton.me/download/PassDesktop/linux/x64/ProtonPass.rpm
 sudo dnf install ./ProtonPass.rpm
 rm ProtonPass.rpm
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrep
-flatpak install flathub com.spotify.Client
-flatpak install flathub app.zen_browser.zen
-flatpak install flathub app.grayjay.Grayjay
-
 echo "Setup config files"
-cd ~/.dotfiles2
 stow hyprland/
 stow terminal/
 
 echo "Setup GDM"
-cd ~/.gdm-themes/theme
 sudo cp /usr/share/gnome-shell/gnome-shell-theme.gresource /usr/share/gnome-shell/gnome-shell-theme-original.gresource
-sudo cp ./gnome-shell-theme.gresource /usr/share/gnome-shell
+sudo cp ~/.gdm-themes/theme/gnome-shell-theme.gresource /usr/share/gnome-shell
 
 systemctl enable gdm.service
 systemctl set-default graphical.target
@@ -87,3 +78,5 @@ sudo systemctl enable nvidia-{suspend,resume,hibernate}
 # Optional: tweak "nvidia options NVreg_TemporaryFilePath=/var/tmp" from /etc/modprobe.d/nvidia.conf as needed if you have issue with /tmp as tmpfs with nvidia suspend )
 
 sudo dnf install nvidia-vaapi-driver libva-utils vdpauinfo
+
+sudo reboot

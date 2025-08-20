@@ -7,7 +7,7 @@ echo "Installing Hyprland Packages for a SwayVM group like expirience"
 sudo dnf copr enable tofik/nwg-shell
 sudo dnf copr enable solopasha/hyprland
 
-sudo dnf install hyprland hyprpaper hypridle hyprlock rofi-wayland grim polkit slurp wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland nwg-look hyprpanel hyprsunset
+sudo dnf install hyprland hyprpaper hypridle hyprlock rofi-wayland grim slurp wlsunset xdg-desktop-portal-wlr xorg-x11-server-Xwayland nwg-look hyprpanel hyprsunset
 
 sudo dnf install pip
 pip install pywal gpustat

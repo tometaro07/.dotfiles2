@@ -13,18 +13,17 @@ sudo dnf install pip
 pip install pywal gpustat
 
 echo "Installing SwayVM group addapted"
-sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard wlr-randr xarchiver xdg-desktop-portal-gtk glib2-devel wget
+sudo dnf install nautilus blueman nmtui bolt fprintd-pam gnome-keyring-pam gnome-themes-extra gvfs gvfs-smb imv kanshi lxqt-policykit mpv pavucontrol pinentry-gnome3 playerctl pulseaudio-utils system-config-printer wev wl-clipboard xarchiver xdg-desktop-portal-gtk glib2-devel
 
 sudo dnf install gdm --setopt=install_weak_deps=False
 
 echo "Install Ghostty and Starship"
 sudo dnf copr enable pgdev/ghostty
-sudo dnf install ghostty
-
 sudo dnf copr enable atim/starship
-sudo dnf install starship
+sudo dnf install ghostty starship
 
 sudo dnf remove kitty nwg-panel wofi
+sudo dnf install wlr-randr
 
 echo "Install Tools"
 sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
